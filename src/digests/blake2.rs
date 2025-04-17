@@ -4,11 +4,14 @@ use digest::{Digest, Update, FixedOutput, VariableOutput};
 pub struct Blake2sHasher;
 
 impl Blake2sHasher {
-    pub fn new_keser_standard(data: &[u8]) -> [u8; 28] {
+    pub fn keser_standard(data: &[u8]) -> [u8; 28] {
         Self::new_224(data)
     }
-    pub fn new_keser_256(data: &[u8]) -> [u8; 32] {
+    pub fn keser_256(data: &[u8]) -> [u8; 32] {
         Self::new_256(data)
+    }
+    pub fn keser_mid_240(data: &[u8]) -> [u8; 30] {
+        Self::new_240(data)
     }
     pub fn new_160(data: &[u8]) -> [u8; 20] {
         let mut hasher = Blake2sVar::new(20).expect("Invalid output size");

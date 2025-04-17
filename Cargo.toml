@@ -1,6 +1,7 @@
 [package]
 name = "addresshashing"
 version = "0.1.0"
+authors = ["silene0259,Yugensource"]
 edition = "2024"
 description = "A Rust library for hashing addresses using the Blake2 algorithm"
 license = "MIT or APACHE-2.0"
