@@ -82,7 +82,7 @@ impl Blake2sHasher {
 
 #[test]
 fn run() {
-    let data = b"llo world";
+    let data = b"hello world";
     let hash_224 = Blake2sHasher::new_224(data);
     println!("224-bit Hash: {:?}", hash_224);
 }
