@@ -23,6 +23,14 @@ impl Blake2sHasher {
         output.copy_from_slice(&result[..22]);
         output
     }
+    pub fn new_190(data: &[u8]) -> [u8; 24] {
+        let mut hasher = Blake2sVar::new(24).expect("Invalid output size");
+        hasher.update(data);
+        let result = hasher.finalize_boxed();
+        let mut output = [0u8; 24];
+        output.copy_from_slice(&result[..24]);
+        output
+    }
     pub fn new_208(data: &[u8]) -> [u8; 26] {
         let mut hasher = Blake2sVar::new(26).expect("Invalid output size");
         hasher.update(data);
