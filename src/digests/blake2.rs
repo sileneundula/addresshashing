@@ -72,6 +72,9 @@ impl Blake2sHasher {
         output.copy_from_slice(&result[..32]);
         output
     }
+    pub fn assert_length(data: &[u8], length: usize) -> bool {
+        data.len() == length && length <= 32
+    }
 }
 
 #[test]
