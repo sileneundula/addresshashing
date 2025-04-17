@@ -1,0 +1,13 @@
+[package]
+name = "addresshashing"
+version = "0.1.0"
+edition = "2024"
+author = "YugenSource"
+description = "A Rust library for hashing addresses using the Blake2 algorithm"
+license = "MIT or APACHE-2.0"
+categories = ["cryptography", "hashing"]
+keywords = ["decentralized", "address", "hashing", "blake2", "cryptography"]
+
+[dependencies]
+blake2 = "0.10.6"
+digest = "0.10.7"
