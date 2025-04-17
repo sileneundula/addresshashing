@@ -4,12 +4,17 @@ use digest::{Digest, Update, FixedOutput, VariableOutput};
 pub struct Blake2sHasher;
 
 impl Blake2sHasher {
+    /// # Standard Address Scheme
+    /// 
+    /// This is the standard address scheme used in most cases.
     pub fn keser_standard(data: &[u8]) -> [u8; 28] {
         Self::new_224(data)
     }
+    /// # Security Address Scheme
     pub fn keser_256(data: &[u8]) -> [u8; 32] {
         Self::new_256(data)
     }
+    /// # Mid-Address Scheme
     pub fn keser_mid_240(data: &[u8]) -> [u8; 30] {
         Self::new_240(data)
     }
